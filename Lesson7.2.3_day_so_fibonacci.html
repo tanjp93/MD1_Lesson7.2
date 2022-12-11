@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Day so Fibonacci </h1>
+<p>Hien thi 20 so dau tien trong day so <b id="Fibonacci"></b></p>
+<button onclick="result()">Result</button>
+<script>
+
+    function result() {
+        let a = 0;
+        let b = 1;
+        for (let i = 1; i < 20; i++) {
+            let c = a + b;
+            a = b;
+            b = c
+            console.log("c>>>>>>" + c)
+            document.write(` ${a} ,`);
+        }
+    }
+</script>
+</body>
+</html>

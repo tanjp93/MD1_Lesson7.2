@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>L</title>
+</head>
+<body>
+<h2>Dem day so </h2>
+<p>So bat dau<input id="num1"></p>
+<p>So ke thuc <input id="num2"></p>
+<p ><button  onclick="count()">Result</button><b id="count"></b></p>
+<script>
+    function count() {
+        let num1=document.getElementById("num1").value;
+        let num2=document.getElementById("num2").value;
+        let i = 0
+        for (num1;num1<= num2; num1++,i++) {
+        }
+        document.getElementById("count").innerText=("day so bao gom" +i +"so");
+    }
+</script>
+</body>
+</html>

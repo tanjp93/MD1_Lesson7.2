@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        td {
+            border: 1px solid blue;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+<p><b>Nhap day so ban muon kiem tra</b><input id="num1" min="2" value=""> <b>den</b> <input id="num2">
+    <button onclick="checkNumber()">Check</button>
+</p>
+<table>
+    <script>
+        document.write(`<tr>`)
+        function checkNumber() {
+            let num1 = +document.getElementById("num1").value;
+            let num2 = +document.getElementById("num2").value;
+            let i;
+            for (i = num1; i <= num2; i++) {
+                if (i == 2 || i == 3 || i == 5 || i == 7|| i==11) {
+                    console.log(i, true)
+                    document.write(`<td>${i} la so nguyen to </td>`)
+                } else {
+                    if (i % 2 == 0 || i % 3 == 0 || i % 5 == 0 || i % 7 == 0||i%11==0) {
+                        console.log(i, false)
+                        document.write(`<td>${i} khong la so nguyen to </td>`)
+                    } else {
+                        console.log(i, true)
+                        document.write(`<td>${i} la so nguyen to </td>`)
+                    }
+                }
+            }
+        }
+        document.write(`</tr>`)
+    </script>
+</table>
+
+</body>
+</html>
