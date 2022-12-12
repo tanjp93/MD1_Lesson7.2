@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh giai thua</title>
+</head>
+<body>
+<script>
+    let number = +prompt("Hãy nhập số");
+    let i;
+    let giaiThua  =1;
+    if (number == 0) {
+        document.write(`${number}!=${giaiThua}`);}
+    else
+        {
+            for (i = 1; i <= number; i++) {
+                giaiThua*=i;
+            }
+        }
+    document.write(`${number}!=${giaiThua}`);
+</script>
+</body>
+</html>

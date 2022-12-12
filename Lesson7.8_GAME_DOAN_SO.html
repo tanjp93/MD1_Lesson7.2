@@ -19,18 +19,29 @@
         let input1 = +prompt("Nhập khoảng số -Số bắt đầu ");
         let input2 = +prompt("Nhập khoảng số -Số kết thúc");
         if (input2 > input1) {
+            let check = false;
             let luckyNumber = +prompt("Hay nhap so may man");
             let raDom = (Math.floor(Math.random() * (input2 - input1))) + input1;
-            if (luckyNumber == raDom) {
-                alert(`Bạn đã đoán đúng`)
-                console.log("radom>>>>>"+raDom)
-            } else if (luckyNumber > raDom) {
-                alert(`Số bạn đoán lớn hơn, hãy thử lại `)
-                console.log("radom>>>>>"+raDom)
-            } else {
-                alert(`Số bạn đoán bé hơn ,hãy thử lại`)
-                console.log("radom>>>>>"+raDom);
-                document.getElementById()
+            console.log("radom>>>>>" + raDom);
+            for (let i = 1; i <= 2; i++) {
+                if (luckyNumber == raDom) {
+                    check=true;
+                    console.log("radom>>>>>" + raDom)
+                    break;
+                } else if (luckyNumber > raDom) {
+                    alert(`Số bạn đoán lớn hơn, hãy thử lại <br> Ban con &{{i}--1} luot`)
+                    luckyNumber = +prompt("Hay nhap so may man");
+                    console.log("radom>>>>>" + raDom);
+                } else {
+                    alert(`Số bạn đoán bé hơn ,hãy thử lại`)
+                    luckyNumber = +prompt("Hay nhap so may man");
+                    console.log("radom>>>>>" + raDom);
+                }
+            }
+            if (check){
+                alert("you win")
+            }else {
+                alert("you lose")
             }
         } else {
             alert(`Yêu cầu nhập đúng khoảng`)
