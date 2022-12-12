@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: "Times New Roman";
+        }
+    </style>
+</head>
+<body>
+<h2> GAME doan so </h2>
+<button onclick="checkNumberLucky()">
+    Choi
+</button>
+<script>
+    function checkNumberLucky() {
+        let input1 = +prompt("Nhập khoảng số -Số bắt đầu ");
+        let input2 = +prompt("Nhập khoảng số -Số kết thúc");
+        if (input2 > input1) {
+            let luckyNumber = +prompt("Hay nhap so may man");
+            let raDom = (Math.floor(Math.random() * (input2 - input1))) + input1;
+            if (luckyNumber == raDom) {
+                alert(`Bạn đã đoán đúng`)
+                console.log("radom>>>>>"+raDom)
+            } else if (luckyNumber > raDom) {
+                alert(`Số bạn đoán lớn hơn, hãy thử lại `)
+                console.log("radom>>>>>"+raDom)
+            } else {
+                alert(`Số bạn đoán bé hơn ,hãy thử lại`)
+                console.log("radom>>>>>"+raDom);
+                document.getElementById()
+            }
+        } else {
+            alert(`Yêu cầu nhập đúng khoảng`)
+        }
+    }
+</script>
+</body>
+</html>

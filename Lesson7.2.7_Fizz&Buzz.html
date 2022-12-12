@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fizz&Buzz</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        td, tr {
+            border: 1px solid red;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+    </style>
+</head>
+<body>
+<table  cellspacing="0">
+    <script>
+        document.write(`<tr>`)
+        for (let i = 0; i <= 100; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                document.write(`<td >${i}FizzBuzz </td> `);
+                document.write(`</tr>`)
+            } else {
+                if (i % 3 == 0) {
+                    document.write(`<td>${i}Fizz </td> `)
+                } else {
+                    if (i % 5 == 0) {
+                        document.write(`<td>${i}Buzz</td>`)
+                    }
+                }
+            }
+        }
+        document.write(`</tr>`)
+    </script>
+</table>
+</body>
+</html>
