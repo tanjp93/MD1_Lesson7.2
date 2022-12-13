@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = prompt("Nhap chieu cao canh")
+    number = parseInt(number);
+    let y=1;
+    for (let i = number; i >= 1; i-- ){
+        for (let j = 1; j < i; j++) {
+            document.write("&nbsp;  ")
+            console.log("i,j>>>" + i, j)
+        }
+        for (let k=1; k<=y;k++){
+            if (y<=number)
+            document.write(" * ")
+        }
+        document.write("<br>")
+        y++;
+    }
+</script>
+</body>
+</html>
